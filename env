@@ -14,7 +14,7 @@
 # ENVIRONMENT
 #--------------------------------------------------------------------
 
-# CI_ENVIRONMENT = production
+CI_ENVIRONMENT = production
 
 #--------------------------------------------------------------------
 # APP
@@ -22,9 +22,9 @@
 
 # app.baseURL = ''
 # If you have trouble with `.`, you could also use `_`.
-# app_baseURL = ''
-# app.forceGlobalSecureRequests = false
-# app.CSPEnabled = false
+app_baseURL = 'https://ci4-live-production.up.railway.app/'
+app.forceGlobalSecureRequests = false
+app.CSPEnabled = false
 
 #--------------------------------------------------------------------
 # DATABASE
