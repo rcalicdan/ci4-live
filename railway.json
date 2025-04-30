@@ -1,9 +1,8 @@
 {
-    "build": {
-      "command": "composer install --no-dev --optimize-autoloader"
-    },
-    "start": {
-      "command": "php spark serve --host=0.0.0.0 --port=8080"
-    }
+  "build": {
+    "command": "composer install --no-dev --optimize-autoloader"
+  },
+  "start": {
+    "command": "chmod -R 777 writable/ && php spark serve --host=0.0.0.0 --port=8080"
   }
-  
+}
