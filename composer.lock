@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e9ed221894c16b238aeca174475ca8bc",
+    "content-hash": "3287a4bf65ccaa73e8c271f79adcdfb0",
     "packages": [
         {
             "name": "brick/math",
@@ -2725,12 +2725,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rcalicdan/ci4-larabridge.git",
-                "reference": "7add58ea55b27f4edd7c8c42aaa8fbaa419365aa"
+                "reference": "bc63707be57469719da3bd715440f6274df8bd01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rcalicdan/ci4-larabridge/zipball/7add58ea55b27f4edd7c8c42aaa8fbaa419365aa",
-                "reference": "7add58ea55b27f4edd7c8c42aaa8fbaa419365aa",
+                "url": "https://api.github.com/repos/rcalicdan/ci4-larabridge/zipball/bc63707be57469719da3bd715440f6274df8bd01",
+                "reference": "bc63707be57469719da3bd715440f6274df8bd01",
                 "shasum": ""
             },
             "require": {
@@ -2788,7 +2788,7 @@
                 "issues": "https://github.com/rcalicdan/ci4-larabridge/issues",
                 "source": "https://github.com/rcalicdan/ci4-larabridge"
             },
-            "time": "2025-04-30T03:42:05+00:00"
+            "time": "2025-04-30T13:58:37+00:00"
         },
         {
             "name": "symfony/clock",
@@ -6061,7 +6061,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^8.1"
+        "php": "^8.2"
     },
     "platform-dev": {},
     "plugin-api-version": "2.6.0"
