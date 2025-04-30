@@ -1,4 +1,4 @@
-FROM php:8.3.21RC1-fpm-bullseye
+FROM php:8.3.20-apache
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
@@ -28,10 +28,7 @@ WORKDIR /app
 COPY . /app
 
 # Install dependencies
-RUN composer install --no-interaction
+RUN composer install --no-dev
 
 # Expose port
 EXPOSE $PORT
-
-# Use the Procfile command
-CMD ["php", "spark", "serve", "--host=0.0.0.0", "--port=${PORT:-8080}"]
