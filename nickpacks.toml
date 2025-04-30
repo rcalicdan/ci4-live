@@ -3,6 +3,3 @@ nixPkgs = ['php82', 'php82Extensions.pdo', 'php82Extensions.mysql', 'php82Extens
 
 [phases.build]
 cmds = ['composer install --no-dev']
-
-[start]
-cmd = "php-fpm -D && nginx -g 'daemon off;'"
