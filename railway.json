@@ -1,0 +1,13 @@
+{
+    "$schema": "https://railway.com/railway.schema.json",
+    "build": {
+        "builder": "NIXPACKS"
+    },
+    "deploy": {
+        "startCommand": "mkdir -p /app/writable/cache /app/writable/debugbar /app/writable/logs /app/writable/session && chmod -R 775 /app/writable && php-fpm",
+        "healthcheckPath": "/",
+        "healthcheckTimeout": 100,
+        "restartPolicyType": "ON_FAILURE",
+        "restartPolicyMaxRetries": 10
+    }
+}
