@@ -1,13 +1,10 @@
 {
   "build": {
-    "command": "composer install --no-dev --optimize-autoloader && php spark blade:compile"
+    "command": "composer install --no-dev --optimize-autoloader"
   },
   "start": {
     "command": [
-      "mkdir -p writable/cache writable/logs writable/session writable/views",
-      "chmod -R 777 writable",
-      "php spark blade:compile",
-      "php spark serve --host=0.0.0.0 --port=8080"
+      "php spark serve --port 8080"
     ]
   }
 }
