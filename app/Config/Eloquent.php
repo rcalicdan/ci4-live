@@ -78,14 +78,14 @@ class Eloquent extends BaseConfig
 
     public function __construct()
     {
-        $this->databaseHost = getenv('database.default.hostname') ?? 'localhost';
-        $this->databaseName = getenv('database.default.database') ?? '';
-        $this->databaseUsername = getenv('database.default.username') ?? 'root';
-        $this->databasePassword = getenv('database.default.password') ?? '';
-        $this->databaseCharset = getenv('database.default.charset') ?? 'utf8';
-        $this->databaseCollation = getenv('database.default.DBCollat') ?? 'utf8_general_ci';
-        $this->databasePrefix = getenv('database.default.DBPrefix') ?? '';
-        $this->databasePort = getenv('database.default.port') ?? '3309';
-        $this->databaseDriver = getenv('database.default.DBDriver') ?? 'mysql';
+        $this->databaseHost = getenv('database.default.hostname') ? getenv('database.default.hostname') : 'localhosts';
+        $this->databaseName = getenv('database.default.database') ? getenv('database.default.database') : '';
+        $this->databaseUsername = getenv('database.default.username') ? getenv('database.default.username') : 'root';
+        $this->databasePassword = getenv('database.default.password') ? getenv('database.default.password') : '';
+        $this->databaseCharset = getenv('database.default.charset') ? getenv('database.default.charset') : 'utf8';
+        $this->databaseCollation = getenv('database.default.DBCollat') ? getenv('database.default.DBCollat') : 'utf8_general_ci';
+        $this->databasePrefix = getenv('database.default.DBPrefix') ? getenv('database.default.DBPrefix') : '';
+        $this->databasePort = getenv('database.default.port') ? getenv('database.default.port') : '3309';
+        $this->databaseDriver = getenv('database.default.DBDriver') ? getenv('database.default.DBDriver') : 'mysql';
     }
 }
