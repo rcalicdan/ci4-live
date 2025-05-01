@@ -52,7 +52,9 @@ abstract class BaseController extends Controller
         parent::initController($request, $response, $logger);
 
         // Preload any models, libraries, etc, here.
-
+        // Now load services that depend on env
+        service('eloquent');
+        service('authorization');
         // E.g.: $this->session = service('session');
     }
 }
