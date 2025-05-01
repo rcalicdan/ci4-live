@@ -1,4 +1,5 @@
 <?php
+//try
 $envs = [
     'DB_HOST' => getenv('DB_HOST'),
     'DB_USERNAME' => getenv('DB_USERNAME'),
