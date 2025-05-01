@@ -2725,12 +2725,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rcalicdan/ci4-larabridge.git",
-                "reference": "bc63707be57469719da3bd715440f6274df8bd01"
+                "reference": "d177c4f2d97a39b19539e8c91bdf676552a5f74e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rcalicdan/ci4-larabridge/zipball/bc63707be57469719da3bd715440f6274df8bd01",
-                "reference": "bc63707be57469719da3bd715440f6274df8bd01",
+                "url": "https://api.github.com/repos/rcalicdan/ci4-larabridge/zipball/d177c4f2d97a39b19539e8c91bdf676552a5f74e",
+                "reference": "d177c4f2d97a39b19539e8c91bdf676552a5f74e",
                 "shasum": ""
             },
             "require": {
@@ -2788,7 +2788,7 @@
                 "issues": "https://github.com/rcalicdan/ci4-larabridge/issues",
                 "source": "https://github.com/rcalicdan/ci4-larabridge"
             },
-            "time": "2025-04-30T13:58:37+00:00"
+            "time": "2025-05-01T16:09:54+00:00"
         },
         {
             "name": "symfony/clock",

@@ -18,7 +18,7 @@ class Eloquent extends BaseConfig
      *
      * @var string
      */
-    public $databaseHost = 'mysql.railway.internal';
+    public $databaseHost = 'localhost';
 
     /**
      * Default Database driver to use
@@ -32,7 +32,7 @@ class Eloquent extends BaseConfig
      *
      * @var string
      */
-    public $databaseName = 'railway';
+    public $databaseName = '';
 
     /**
      * Default Database username for authentication
@@ -46,7 +46,7 @@ class Eloquent extends BaseConfig
      *
      * @var string
      */
-    public $databasePassword = 'bIUcWnnYnjNSsbyyacMqkFvcciZpdJIz';
+    public $databasePassword = '';
 
     /**
      * Default Database connection character set
