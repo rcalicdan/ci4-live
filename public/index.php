@@ -3,6 +3,7 @@ $debug = print_r($_SERVER, true);
 
 echo $debug;
 
+// Set environment variables from $_SERVER
 foreach ($_SERVER as $key => $value) {
     if (str_starts_with($key, 'DB_')) {
         putenv("$key=$value");
