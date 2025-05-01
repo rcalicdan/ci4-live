@@ -18,74 +18,74 @@ class Eloquent extends BaseConfig
      *
      * @var string
      */
-    public $databaseHost = 'localhost';
+    public $databaseHost;
 
     /**
      * Default Database driver to use
      *
      * @var string
      */
-    public $databaseDriver = 'mysql';
+    public $databaseDriver;
 
     /**
      * Default Database name to connect to
      *
      * @var string
      */
-    public $databaseName = '';
+    public $databaseName;
 
     /**
      * Default Database username for authentication
      *
      * @var string
      */
-    public $databaseUsername = 'root';
+    public $databaseUsername;
 
     /**
      * Default Database password for authentication
      *
      * @var string
      */
-    public $databasePassword = '';
+    public $databasePassword;
 
     /**
      * Default Database connection character set
      *
      * @var string
      */
-    public $databaseCharset = 'utf8';
+    public $databaseCharset;
 
     /**
      * Default Database collation setting
      *
      * @var string
      */
-    public $databaseCollation = 'utf8_general_ci';
+    public $databaseCollation;
 
     /**
      * Default Table prefix for database connections
      *
      * @var string
      */
-    public $databasePrefix = '';
+    public $databasePrefix ;
 
     /**
      * Default Database connection port
      *
      * @var string
      */
-    public $databasePort = '3306';
+    public $databasePort;
 
     public function __construct()
     {
-        $this->databaseHost = env('database.default.hostname', 'localhost');
-        $this->databaseName = env('database.default.database', '');
-        $this->databaseUsername = env('database.default.username', 'root');
-        $this->databasePassword = env('database.default.password', '');
-        $this->databaseCharset = env('database.default.charset', 'utf8'); 
-        $this->databaseCollation = env('database.default.DBCollat', 'utf8_general_ci');
-        $this->databasePrefix = env('database.default.DBPrefix', '');
-        $this->databasePort = env('database.default.port', '3306');
-        $this->databaseDriver = env('database.default.DBDriver', 'mysql');
+        $this->databaseHost = getenv('database.default.hostname') ?? 'localhost';
+        $this->databaseName = getenv('database.default.database') ?? '';
+        $this->databaseUsername = getenv('database.default.username') ?? 'root';
+        $this->databasePassword = getenv('database.default.password') ?? '';
+        $this->databaseCharset = getenv('database.default.charset') ?? 'utf8';
+        $this->databaseCollation = getenv('database.default.DBCollat') ?? 'utf8_general_ci';
+        $this->databasePrefix = getenv('database.default.DBPrefix') ?? '';
+        $this->databasePort = getenv('database.default.port') ?? '3309';
+        $this->databaseDriver = getenv('database.default.DBDriver') ?? 'mysql';
     }
 }
