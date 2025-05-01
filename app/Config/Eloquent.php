@@ -75,4 +75,17 @@ class Eloquent extends BaseConfig
      * @var string
      */
     public $databasePort = '3306';
+
+    public function __construct()
+    {
+        $this->databaseHost = env('database.default.hostname');
+        $this->databaseName = env('database.default.database');
+        $this->databaseUsername = env('database.default.username');
+        $this->databasePassword = env('database.default.password');
+        $this->databaseCharset = env('database.default.DBDriver');
+        $this->databaseCollation = env('database.default.DBCollat');
+        $this->databasePrefix = env('database.default.DBPrefix');
+        $this->databasePort = env('database.default.port');
+        $this->databaseDriver = env('database.default.DBDriver');
+    }
 }
