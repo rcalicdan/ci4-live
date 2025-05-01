@@ -23,12 +23,20 @@ use CodeIgniter\HotReloader\HotReloader;
  *      Events::on('create', [$myInstance, 'myMethod']);
  */
 
-Events::on('pre_system', static function (): void {
-    // Load the Eloquent configuration
+ Events::on('pre_system', static function (): void {
+    // ✅ Hydrate Railway DB_ env vars before loading services
+    foreach ($_SERVER as $key => $value) {
+        if (str_starts_with($key, 'DB_')) {
+            putenv("$key=$value");
+            $_ENV[$key] = $value;
+        }
+    }
+
+    // Now load services that depend on env
     service('eloquent');
-    // Load the authentication configuration
     service('authorization');
 });
+
 
 Events::on('pre_system', static function (): void {
     if (ENVIRONMENT !== 'testing') {
