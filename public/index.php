@@ -1,5 +1,7 @@
 <?php
-file_put_contents(__DIR__ . '/writable/logs/_server_dump.log', print_r($_SERVER, true));
+print_r($_SERVER, true);
+
+dump($_SERVER);
 
 // ✅ Hydrate Railway DB_ env vars BEFORE anything else
 foreach ($_SERVER as $key => $value) {
