@@ -18,74 +18,61 @@ class Eloquent extends BaseConfig
      *
      * @var string
      */
-    public $databaseHost;
+    public $databaseHost = 'mysql.railway.internal';
 
     /**
      * Default Database driver to use
      *
      * @var string
      */
-    public $databaseDriver;
+    public $databaseDriver = 'mysql';
 
     /**
      * Default Database name to connect to
      *
      * @var string
      */
-    public $databaseName;
+    public $databaseName = 'railway';
 
     /**
      * Default Database username for authentication
      *
      * @var string
      */
-    public $databaseUsername;
+    public $databaseUsername = 'root';
 
     /**
      * Default Database password for authentication
      *
      * @var string
      */
-    public $databasePassword;
+    public $databasePassword = 'bIUcWnnYnjNSsbyyacMqkFvcciZpdJIz';
 
     /**
      * Default Database connection character set
      *
      * @var string
      */
-    public $databaseCharset;
+    public $databaseCharset = 'utf8';
 
     /**
      * Default Database collation setting
      *
      * @var string
      */
-    public $databaseCollation;
+    public $databaseCollation = 'utf8_general_ci';
 
     /**
      * Default Table prefix for database connections
      *
      * @var string
      */
-    public $databasePrefix ;
+    public $databasePrefix = '';
 
     /**
      * Default Database connection port
      *
      * @var string
      */
-    public $databasePort;
-
-    public function __construct()
-    {
-        $this->databaseHost = getenv('database.default.hostname') ? getenv('database.default.hostname') : 'localhosts';
-        $this->databaseName = getenv('database.default.database') ? getenv('database.default.database') : '';
-        $this->databaseUsername = getenv('database.default.username') ? getenv('database.default.username') : 'root';
-        $this->databasePassword = getenv('database.default.password') ? getenv('database.default.password') : '';
-        $this->databaseCharset = getenv('database.default.charset') ? getenv('database.default.charset') : 'utf8';
-        $this->databaseCollation = getenv('database.default.DBCollat') ? getenv('database.default.DBCollat') : 'utf8_general_ci';
-        $this->databasePrefix = getenv('database.default.DBPrefix') ? getenv('database.default.DBPrefix') : '';
-        $this->databasePort = getenv('database.default.port') ? getenv('database.default.port') : '3309';
-        $this->databaseDriver = getenv('database.default.DBDriver') ? getenv('database.default.DBDriver') : 'mysql';
-    }
+    public $databasePort = '3306';
 }
