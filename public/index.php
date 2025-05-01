@@ -43,14 +43,24 @@ if (getcwd() . DIRECTORY_SEPARATOR !== FCPATH) {
  * and fires up an environment-specific bootstrapping.
  */
 
-// LOAD OUR PATHS CONFIG FILE
-// This is the line that might need to be changed, depending on your folder structure.
+// 1) Load your Paths config
 require FCPATH . '../app/Config/Paths.php';
-// ^^^ Change this line if you move your application folder
 
 $paths = new Config\Paths();
 
-// LOAD THE FRAMEWORK BOOTSTRAP FILE
+// 2) Load the framework bootstrap
 require $paths->systemDirectory . '/Boot.php';
 
+// ⇩⇩⇩ Hydrate any Railway “Service Variables” starting with DB_* ⇩⇩⇩
+foreach ($_SERVER as $key => $value) {
+    if (str_starts_with($key, 'DB_')) {
+        // putenv makes it visible to getenv()
+        putenv("$key=$value");
+        // and copy into CI4's env() tables
+        $_ENV[$key]    = $value;
+        $_SERVER[$key] = $value;
+    }
+}
+
+// 3) Finally, boot CodeIgniter for web requests
 exit(CodeIgniter\Boot::bootWeb($paths));
