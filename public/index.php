@@ -8,9 +8,13 @@ $envs = [
     'DB_PORT' => getenv('DB_PORT'),
     'DB_DRIVER' => getenv('DB_DRIVER'),
 ];
+
+$checkEnv = print_r($_ENV, true);
 $debug = print_r($envs, true);
 
 echo $debug;
+echo '<br>';
+echo $checkEnv;
 
 // Set environment variables from $_SERVER
 foreach ($_SERVER as $key => $value) {
