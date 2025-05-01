@@ -1,7 +1,8 @@
 <?php
-print_r($_SERVER, true);
+$debug = print_r($_SERVER, true);
 
-// ✅ Hydrate Railway DB_ env vars BEFORE anything else
+echo $debug;
+
 foreach ($_SERVER as $key => $value) {
     if (str_starts_with($key, 'DB_')) {
         putenv("$key=$value");
