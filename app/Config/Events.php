@@ -23,6 +23,7 @@ use CodeIgniter\HotReloader\HotReloader;
  *      Events::on('create', [$myInstance, 'myMethod']);
  */
 
+ //test
  Events::on('pre_system', static function (): void {
     // ✅ Hydrate Railway DB_ env vars before loading services
     foreach ($_SERVER as $key => $value) {
