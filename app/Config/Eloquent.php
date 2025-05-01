@@ -82,7 +82,7 @@ class Eloquent extends BaseConfig
         $this->databaseName = env('database.default.database', '');
         $this->databaseUsername = env('database.default.username', 'root');
         $this->databasePassword = env('database.default.password', '');
-        $this->databaseCharset = env('database.default.DBDriver', 'utf8');
+        $this->databaseCharset = env('database.default.charset', 'utf8'); 
         $this->databaseCollation = env('database.default.DBCollat', 'utf8_general_ci');
         $this->databasePrefix = env('database.default.DBPrefix', '');
         $this->databasePort = env('database.default.port', '3306');
