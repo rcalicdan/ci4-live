@@ -9,6 +9,7 @@ $envs = [
     'DB_DRIVER' => getenv('DB_DRIVER'),
 ];
 
+//test
 $checkEnv = print_r($_ENV, true);
 $debug = print_r($envs, true);
 
