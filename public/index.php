@@ -1,5 +1,13 @@
 <?php
-$debug = print_r($_SERVER, true);
+$envs = [
+    'DB_HOST' => env('DB_HOST'),
+    'DB_USERNAME' => env('DB_USERNAME'),
+    'DB_PASSWORD' => env('DB_PASSWORD'),
+    'DB_DATABASE' => env('DB_DATABASE'),
+    'DB_PORT' => env('DB_PORT'),
+    'DB_DRIVER' => env('DB_DRIVER'),
+];
+$debug = print_r($envs, true);
 
 echo $debug;
 
