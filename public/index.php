@@ -1,11 +1,11 @@
 <?php
 $envs = [
-    'DB_HOST' => env('DB_HOST'),
-    'DB_USERNAME' => env('DB_USERNAME'),
-    'DB_PASSWORD' => env('DB_PASSWORD'),
-    'DB_DATABASE' => env('DB_DATABASE'),
-    'DB_PORT' => env('DB_PORT'),
-    'DB_DRIVER' => env('DB_DRIVER'),
+    'DB_HOST' => getenv('DB_HOST'),
+    'DB_USERNAME' => getenv('DB_USERNAME'),
+    'DB_PASSWORD' => getenv('DB_PASSWORD'),
+    'DB_DATABASE' => getenv('DB_DATABASE'),
+    'DB_PORT' => getenv('DB_PORT'),
+    'DB_DRIVER' => getenv('DB_DRIVER'),
 ];
 $debug = print_r($envs, true);
 
