@@ -53,8 +53,6 @@ abstract class BaseController extends Controller
 
         // Preload any models, libraries, etc, here.
         // Now load services that depend on env
-        service('eloquent');
-        service('authorization');
         // E.g.: $this->session = service('session');
     }
 }

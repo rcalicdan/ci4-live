@@ -1,31 +1,4 @@
 <?php
-//try
-$envs = [
-    'DB_HOST' => getenv('DB_HOST'),
-    'DB_USERNAME' => getenv('DB_USERNAME'),
-    'DB_PASSWORD' => getenv('DB_PASSWORD'),
-    'DB_DATABASE' => getenv('DB_DATABASE'),
-    'DB_PORT' => getenv('DB_PORT'),
-    'DB_DRIVER' => getenv('DB_DRIVER'),
-];
-
-//test
-$checkEnv = print_r($_ENV, true);
-$debug = print_r($envs, true);
-
-echo $debug;
-echo '<br>';
-echo $checkEnv;
-
-// Set environment variables from $_SERVER
-foreach ($_SERVER as $key => $value) {
-    if (str_starts_with($key, 'DB_')) {
-        putenv("$key=$value");
-        $_ENV[$key]    = $value;
-        $_SERVER[$key] = $value;
-    }
-}
-
 /*
  *---------------------------------------------------------------
  * CHECK PHP VERSION

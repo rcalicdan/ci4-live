@@ -23,6 +23,10 @@ use CodeIgniter\HotReloader\HotReloader;
  *      Events::on('create', [$myInstance, 'myMethod']);
  */
 
+Events::on('pre_system', static function (): void {
+    service('eloquent');
+    service('authorization');
+});
 
 Events::on('pre_system', static function (): void {
     if (ENVIRONMENT !== 'testing') {
